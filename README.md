@@ -1,74 +1,45 @@
-# 🧹 Docker Cleanup Pro
+# Docker Cleanup Pro (Windows Edition)
 
-**Versão:** 1.0  
-**Autor:** [Matheus Névoa](https://www.linkedin.com/in/matheusnevoa)  
-**Site:** [nevoaia.com](https://nevoaia.com)
+Version: 1.0  
+Author: Matheus Nevoa  
+Windows adaptation: Mateus Pontes  
+Original Repository (Linux): https://github.com/matheusnevoa/docker-cleanup-pro
 
-Script interativo e profissional para limpeza e otimização do Docker.  
-Ideal para desenvolvedores e administradores que utilizam Docker ou Portainer e desejam liberar espaço, remover recursos órfãos e manter o ambiente limpo e performático.
-
----
-
-## 📦 O que esse script faz?
-
-Este script permite executar **3 tipos de limpeza**:
-
-1. **🧽 Limpeza Básica**
-   - Remove containers parados
-   - Remove redes não utilizadas
-   - Remove imagens dangling
-
-2. **🧼 Limpeza Avançada**
-   - Tudo da limpeza básica +
-   - Remove volumes órfãos
-   - Remove imagens não utilizadas
-   - Limpa cache de build
-
-3. **🔥 Limpeza Total**
-   - Remove todos os recursos não utilizados
-   - Containers, imagens, volumes e redes
+Docker Cleanup Pro is a professional and interactive script designed to clean and optimize Docker environments on Windows.  
+It is ideal for developers and administrators who use Docker or Portainer and want to free disk space, remove unused resources, and keep their environment clean and efficient.
 
 ---
 
-## 🚀 Como usar
+## What this script does
 
-### 1. Clone o repositório
+The tool provides three cleanup levels:
 
-```bash
-git clone https://github.com/matheusnevoa/docker-cleanup-pro.git
-cd docker-cleanup-pro
+1. Basic Cleanup
+   - Removes stopped containers
+   - Removes unused networks
+   - Removes dangling images
 
-### Instalação do script
+2. Advanced Cleanup
+   - Includes everything in Basic Cleanup
+   - Removes orphaned volumes
+   - Removes unused images
+   - Clears build cache
 
-Você pode instalar o Docker Cleanup Pro de forma rápida e fácil usando um dos métodos abaixo. O script será baixado e instalado em `~/.local/bin`, tornando-o disponível globalmente no seu usuário.
+3. Total Cleanup
+   - Removes all unused resources
+   - Containers, images, volumes, and networks
 
-#### Instalação automática (recomendado)
+Additionally, the script can generate a disk usage report showing Docker data usage and system storage information.
 
-**Usando curl:**
-```bash
-curl -sSL https://raw.githubusercontent.com/matheusnevoa/docker-cleanup-pro/refs/heads/main/install.sh | bash
-```
+---
 
-**Usando wget:**
+## Installation (Windows)
 
-```bash
-wget -qO- https://raw.githubusercontent.com/matheusnevoa/docker-cleanup-pro/refs/heads/main/install.sh | bash
-```
+You can install Docker Cleanup Pro using the automatic Windows installer script.
 
-Após a instalação, certifique-se de que o diretório `~/.local/bin` está no seu PATH. O script de instalação já faz isso automaticamente, mas se necessário, adicione a linha abaixo ao seu `~/.bashrc`, `~/.zshrc` ou arquivo de configuração do shell:
+### Automatic installation
 
-```bash
-export PATH="$HOME/.local/bin:$PATH"
-```
+Run the following PowerShell command:
 
-#### Instalação manual
-
-Se preferir, você pode baixar o script manualmente:
-
-```bash
-mkdir -p "$HOME/.local/bin"
-curl -sSL https://raw.githubusercontent.com/matheusnevoa/docker-cleanup-pro/refs/heads/main/docker-cleanup-pro.sh -o "$HOME/.local/bin/docker-cleanup-pro"
-chmod +x "$HOME/.local/bin/docker-cleanup-pro"
-```
-
-Pronto! Agora você pode executar o comando `docker-cleanup-pro` diretamente no seu terminal.
+```ps1
+irm https://raw.githubusercontent.com/mtpontes/docker-cleanup-pro/refs/heads/main/install.ps1 | iex
