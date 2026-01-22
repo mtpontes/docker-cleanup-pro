@@ -1,4 +1,4 @@
-# Docker Cleanup Pro (Windows Edition)
+# Docker Cleanup Pro - Windows Edition
 
 Version: 1.0  
 Author: Matheus Nevoa  
